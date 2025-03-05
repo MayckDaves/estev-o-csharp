@@ -1,0 +1,18 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("Digite a quantidade de números:");
+        int N = int.Parse(Console.ReadLine());
+
+        Console.WriteLine("Digite os números separados por espaço:");
+        int[] vetor = Console.ReadLine().Split().Select(int.Parse).ToArray();
+
+        var pares = vetor.Where(num => num % 2 == 0).ToArray();
+
+        Console.WriteLine("Números pares: " + string.Join(" ", pares));
+        Console.WriteLine("Quantidade de números pares: " + pares.Length);
+    }
+}

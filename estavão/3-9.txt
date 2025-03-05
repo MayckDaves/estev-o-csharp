@@ -1,0 +1,26 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("Digite a quantidade de números:");
+        int N = int.Parse(Console.ReadLine());
+
+        Console.WriteLine("Digite os números do vetor A separados por espaço:");
+        int[] vetor_A = Array.ConvertAll(Console.ReadLine().Split(), int.Parse);
+
+        Console.WriteLine("Digite os números do vetor B separados por espaço:");
+        int[] vetor_B = Array.ConvertAll(Console.ReadLine().Split(), int.Parse);
+
+        int[] vetor_C = new int[N];
+
+        for (int i = 0; i < N; i++)
+        {
+            vetor_C[i] = vetor_A[i] + vetor_B[i];
+        }
+
+        Console.WriteLine("Resultado da soma dos vetores A e B:");
+        Console.WriteLine(string.Join(" ", vetor_C));
+    }
+}
